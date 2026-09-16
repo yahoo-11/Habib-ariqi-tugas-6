@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tiket Online Jakarta - Malaysia</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .kotak {
+    border: 1px solid #999;
+    width: 350px;
+    padding: 15px;
+  }
+  .judul {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #999;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+  }
+  table td { padding: 5px; }
+</style>
+</head>
+<body>
+
+<div class="kotak">
+  <div class="judul">TIKET ONLINE JAKARTA - MALAYSIA</div>
+
+  <form action="proses_tiket.php" method="post">
+    <table>
+      <tr>
+        <td>Nama</td>
+        <td>:</td>
+        <td><input type="text" name="nama" size="25" required></td>
+      </tr>
+      <tr>
+        <td>Pilih Kode Pesawat</td>
+        <td>:</td>
+        <td>
+          <select name="kode_pesawat">
+            <option value="GRD">GRD</option>
+            <option value="MAS">MAS</option>
+            <option value="AIA">AIA</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">Pilih Kelas</td>
+        <td valign="top">:</td>
+        <td>
+          <input type="radio" name="kelas" value="Eksekutif" checked> Eksekutif<br>
+          <input type="radio" name="kelas" value="Bisnis"> Bisnis<br>
+          <input type="radio" name="kelas" value="Ekonomi"> Ekonomi
+        </td>
+      </tr>
+      <tr>
+        <td>Jumlah Tiket</td>
+        <td>:</td>
+        <td>
+          <select name="jumlah_tiket">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <input type="submit" value="SIMPAN">
+    <input type="reset" value="BATAL">
+  </form>
+</div>
+
+</body>
+</html>
